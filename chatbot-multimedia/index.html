@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Abarrotes León | Asistente Virtual</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="app">
+
+        <!-- BARRA SUPERIOR -->
+        <header class="topbar">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    🛒
+                </div>
+
+                <div>
+                    <h1>Abarrotes León</h1>
+
+                    <span>
+                        Asistente Virtual
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="estado">
+                <span class="estado-circulo"></span>
+                Disponible
+            </div>
+
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="contenido">
+
+            <!-- MENÚ LATERAL -->
+            <aside class="sidebar">
+
+                <h2>🛒 Información de la tienda</h2>
+
+                <!-- BUSCADOR -->
+                <div class="buscador">
+
+                    <input
+                        type="text"
+                        id="buscarTema"
+                        placeholder="Buscar categoría..."
+                    >
+
+                </div>
+
+                <!-- CATEGORÍAS -->
+                <div
+                    class="categorias"
+                    id="categorias"
+                >
+
+                    <button
+                        onclick="mostrarTema('productos')"
+                    >
+                        🛍️
+                        <span>Productos</span>
+                    </button>
+
+                    <button
+                        onclick="mostrarTema('tienda')"
+                    >
+                        🏪
+                        <span>Información de la tienda</span>
+                    </button>
+
+                    <button
+                        onclick="mostrarTema('compras')"
+                    >
+                        🧾
+                        <span>Compras y disponibilidad</span>
+                    </button>
+
+                    <button
+                        onclick="mostrarTema('atencion')"
+                    >
+                        💬
+                        <span>Atención al cliente</span>
+                    </button>
+
+                </div>
+
+                <!-- INFORMACIÓN LATERAL -->
+                <div class="info-sidebar">
+
+                    <strong>💡 Información</strong>
+
+                    <p>
+                        Selecciona una categoría o escribe
+                        tu pregunta para consultar información
+                        de Abarrotes León.
+                    </p>
+
+                </div>
+
+            </aside>
+
+            <!-- ÁREA DEL CHAT -->
+            <main class="chat">
+
+                <!-- ENCABEZADO -->
+                <div class="chat-title">
+
+                    <div class="bot-avatar">
+                        🛒
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Asistente Virtual de Abarrotes León
+                        </h2>
+
+                        <p>
+                            Información para nuestros clientes
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- MENSAJES -->
+                <div
+                    id="chat"
+                    class="mensajes"
+                >
+
+                    <!-- MENSAJE INICIAL -->
+                    <div class="mensaje bot">
+
+                        <div class="avatar">
+                            🛒
+                        </div>
+
+                        <div class="burbuja">
+
+                            <h3>
+                                ¡Hola! 👋
+                            </h3>
+
+                            <p>
+                                Bienvenido a
+                                <strong>Abarrotes León</strong>.
+                            </p>
+
+                            <p>
+                                Soy el asistente virtual de la tienda.
+                                Puedo orientarte sobre productos,
+                                información del establecimiento,
+                                compras y atención al cliente.
+                            </p>
+
+                            <p>
+                                ¿Qué información necesitas consultar?
+                            </p>
+
+                            <!-- PREGUNTAS SUGERIDAS -->
+                            <div class="sugerencias">
+
+                                <button
+                                    onclick="mostrarTema('productos')"
+                                >
+                                    🛍️ ¿Qué productos venden?
+                                </button>
+
+                                <button
+                                    onclick="mostrarTema('tienda')"
+                                >
+                                    🏪 Información de la tienda
+                                </button>
+
+                                <button
+                                    onclick="mostrarTema('compras')"
+                                >
+                                    🧾 Precios y disponibilidad
+                                </button>
+
+                                <button
+                                    onclick="mostrarTema('atencion')"
+                                >
+                                    💬 Atención al cliente
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- CAJA DE MENSAJE -->
+                <div class="entrada-area">
+
+                    <div class="entrada">
+
+                        <input
+                            type="text"
+                            id="entrada"
+                            placeholder="Escribe tu pregunta sobre la tienda..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="botonEnviar"
+                            onclick="enviarMensaje()"
+                            aria-label="Enviar mensaje"
+                        >
+                            ➤
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    <!-- ARCHIVOS JAVASCRIPT -->
+    <script src="datos/contenidos.js"></script>
+    <script src="datos/recursos.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
